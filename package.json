@@ -1,0 +1,26 @@
+{
+  "name": "m3-w3-d3-homework",
+  "version": "1.0.0",
+  "description": "MBA Back-End HW - Sass Cont'd",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass -o css/ scss/",
+    "start": "npm run watch:all",
+    "watch:scss": "onchange 'scss/*.scss' -- npm run scss",
+    "watch:all": "parallelshell 'npm run watch:scss' 'npm run lite' "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sdfergus/m3-w3-d3-homework.git"
+  },
+  "author": "Shandira Ferguson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sdfergus/m3-w3-d3-homework/issues"
+  },
+  "homepage": "https://github.com/sdfergus/m3-w3-d3-homework#readme",
+  "devDependencies": {
+    "node-sass": "^8.0.0"
+  }
+}
