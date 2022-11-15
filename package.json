@@ -22,5 +22,8 @@
   "homepage": "https://github.com/sdfergus/m3-w3-d3-homework#readme",
   "devDependencies": {
     "node-sass": "^8.0.0"
+  },
+  "dependencies": {
+    "parallelshell": "^3.0.2"
   }
 }
