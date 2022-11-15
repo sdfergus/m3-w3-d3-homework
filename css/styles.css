@@ -10,45 +10,58 @@ nav li {
 
 nav a {
   display: block;
-  padding: 6px 12px;
+  padding: 6px 2px;
   text-decoration: none;
-  color: white; }
+  color: white;
+  font-size: 16px; }
 
 /* Variables */
+body nav, body footer {
+  padding-left: 5em; }
+
 * {
   font-family: Arial, Helvetica, sans-serif;
   color: #313130; }
 
 body {
   background-color: #daaa0e;
-  padding: 40px 5px; }
-
-/* Nest Main */
-main {
-  width: 1350px;
-  min-height: 535px;
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  background-color: white; }
-  main #intro-text {
-    background-color: #d4d5d8;
-    width: 700px; }
-    main #intro-text span {
-      font-family: "Sacramento", cursive; }
-    main #intro-text button.submit-button {
-      background-color: #daaa0e;
-      color: #313130;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      width: 7em;
-      height: 2.5em;
-      font-size: 1rem;
-      font-weight: bold;
-      padding: 0.5em 2em;
+  padding: 20px 5px;
+  /* Nest Main */ }
+  body nav {
+    margin-bottom: 2em; }
+  body main {
+    width: 1350px;
+    min-height: 535px;
+    display: flex;
+    padding: 20px;
+    background-color: white; }
+    body main #intro-text {
+      background-color: #d4d5d8;
+      width: 800px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      text-decoration: none; }
-  main #intro-image img {
-    height: 100%;
-    width: 800px; }
+      flex-direction: column; }
+      body main #intro-text span {
+        font-family: "Sacramento", cursive;
+        font-size: 30px;
+        font-weight: bold; }
+      body main #intro-text h3 {
+        font-size: 30px; }
+      body main #intro-text p {
+        font-weight: 500; }
+      body main #intro-text .submit-button {
+        background-color: #daaa0e;
+        color: white;
+        border: none;
+        cursor: pointer;
+        height: 3em;
+        padding: 0.5em 1em;
+        margin-top: 2em; }
+    body main #intro-image img {
+      height: 100%;
+      width: 100%; }
+  body footer {
+    margin-top: 2em;
+    font-size: 14px; }

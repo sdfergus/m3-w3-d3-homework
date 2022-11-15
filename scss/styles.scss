@@ -1,24 +1,22 @@
-@import "colors.scss";
+// @import "colors.scss";
 @import "nav.scss";
 
 /* Variables */
 $font-stack: Arial, Helvetica, sans-serif;
 $header-font: "Sacramento", cursive;
 
+%nav-footer-positioning {
+  padding-left: 5em;
+}
+
 @mixin btn-style {
   background-color: $color-body;
-  color: $color-font;
+  color: $color-main;
   border: none;
-  border-radius: 10px;
   cursor: pointer;
-  width: 7em;
-  height: 2.5em;
-  font-size: 1rem;
-  font-weight: bold;
-  padding: 0.5em 2em;
-
-  text-align: center;
-  text-decoration: none;
+  height: 3em;
+  padding: 0.5em 1em;
+  margin-top: 2em;
 }
 
 * {
@@ -28,41 +26,57 @@ $header-font: "Sacramento", cursive;
 
 body {
   background-color: $color-body;
-  padding: 40px 5px;
-}
+  padding: 20px 5px;
 
-/* Nest Main */
-main {
-  width: 1350px;
-  min-height: 535px;
-
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  background-color: $color-main;
-
-  #intro-text {
-    background-color: $color-intro;
-    width: 700px;
-    span {
-      font-family: $header-font;
-    }
-    h3 {
-    }
-    p {
-    }
-    button.submit-button {
-      @include btn-style;
-    }
+  nav {
+    @extend %nav-footer-positioning;
+    margin-bottom: 2em;
   }
 
-  #intro-image {
-    img {
-      height: 100%;
-      //   width: fit-content;
+  /* Nest Main */
+  main {
+    width: 1350px;
+    min-height: 535px;
+
+    display: flex;
+    padding: 20px;
+    background-color: $color-main;
+
+    #intro-text {
+      background-color: $color-intro;
       width: 800px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+      span {
+        font-family: $header-font;
+        font-size: 30px;
+        font-weight: bold;
+      }
+      h3 {
+        font-size: 30px;
+      }
+      p {
+        font-weight: 500;
+      }
+      .submit-button {
+        @include btn-style;
+      }
+    }
+
+    #intro-image {
+      img {
+        height: 100%;
+        width: 100%;
+      }
     }
   }
-}
 
-// Mixin or Extend for button
+  footer {
+    @extend %nav-footer-positioning;
+    margin-top: 2em;
+    font-size: 14px;
+  }
+}
